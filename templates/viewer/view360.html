@@ -1,0 +1,16 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>360 Viewer</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'js/viewer.js' %}" defer></script>
+</head>
+<body>
+    <h2>360° Viewer Simulation</h2>
+    <div id="viewer">
+        <img id="image" src="{{ image_url }}" />
+    </div>
+    <a href="{% url 'home' %}">Back</a>
+</body>
+</html>

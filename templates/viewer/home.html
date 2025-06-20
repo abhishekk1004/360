@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body style="background: linear-gradient(135deg, #e3f2fd, #90caf9); font-family: Arial, sans-serif;">
+    <header class="top-nav">
+        <h1>360 Image Viewer</h1>
+        <nav>
+            <a href="#about">About Us</a>
+            {% if user.is_authenticated %}
+                <a href="{% url 'upload' %}">Upload Image</a>
+                <a href="{% url 'logout' %}">Logout</a>
+            {% else %}
+                <a href="{% url 'login' %}">Login</a>
+            {% endif %}
+        </nav>
+    </header>
+
+    <section class="welcome">
+        {% if user.is_authenticated %}
+            <h2>Welcome, {{ user.username }}!</h2>
+        {% else %}
+            <h2>Welcome to our 360° Viewer Platform!</h2>
+        {% endif %}
+    </section>
+
+    <section class="gallery">
+        <h3>Sample Albums</h3>
+        <div class="album-row">
+            <img src="{% static 'images/sample1.jpg' %}" alt="Sample 1">
+            <img src="{% static 'images/sample2.jpg' %}" alt="Sample 2">
+            <img src="{% static 'images/sample3.jpg' %}" alt="Sample 3">
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p><strong>Click upload to create your own 360° view!</strong></p>
+    </footer>
+</body>
+</html>
