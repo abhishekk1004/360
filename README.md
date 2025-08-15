@@ -42,7 +42,7 @@ This project supports the following platforms:
 
 2. **Setup virtual environment:**
     
-    Linux
+    For Linux
     ```sh
     python -m venv env source # setup virtual environment
     ```
@@ -52,7 +52,7 @@ This project supports the following platforms:
     ```sh
     deactivate # run this when you need to deactivate virtual environment
     ```
-    Windows
+    For Windows
     ```sh
     env\Scripts\activate
     ```
