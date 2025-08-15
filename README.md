@@ -1,88 +1,94 @@
-🌀 360° Image Viewer Web App
-This Django-based web application allows users to register, log in, upload their own images, and simulate 360° views. It's designed for ease of use and can be extended to support true 360° viewers or sprite animations.
+## Overview
 
-🔥 Features
-✅ User Registration and Login
+360 is Django based web applicable which allows user to upload their image and based on the provided images it will simulate 360 view.
 
-✅ Authentication-protected Image Upload
+## Features
 
-✅ Simulated 360° Viewer
+- Secure user authentication
+- Simulate 360 view based on the images
 
-✅ Sample Albums on Home Page
+## Tools and Technology used
 
-✅ Admin Dashboard for User & Upload Management
+- Django
+- three.js
+- Bootstrap and Tailwind
 
-✅ Clean, Gradient-Styled UI with Navigation
+## Getting Started
 
-✅ Secure Logout (POST only)
+### Platforms
 
-📁 Folder Structure
+This project supports the following platforms:
 
-image_rt/
-├── checking/                 # Django app
-│   ├── templates/viewer/   # All HTML templates
-│   ├── static/
-│   │   ├── css/style.css
-│   │   ├── js/viewer.js
-│   │   └── images/sample1.jpg ...
-│   ├── models.py           # UploadedImage model
-│   ├── views.py
-│   ├── forms.py
-│   ├── urls.py
-├── media/                  # Stores uploaded images
-├── db.sqlite3
-├── manage.py
-├── project/settings.py
-├── project/urls.py
-└── README.md
-🚀 Setup Instructions
-1. Clone the repo:
-    git clone https://github.com/yourusername/360-image-viewer.git
-cd image_rt
+- Linux
+- macOS
+- Windows
 
-2. Create a virtual environment:
-    python -m venv env
-    source env/bin/activate  # On Windows: env\Scripts\activate
+### Requirements
 
-3. Install dependencies:
-    pip install django pillow
+- python >= 3.12.0 
+- pip
 
-4. Run migrations:
+### Installation
+
+1. **Clone the repository:**
+    ```sh
+    git clone https://github.com/abhishekk1004/360.git
+    ```
+    ```sh
+    cd 360
+    ```
+
+2. **Setup virtual environment:**
+    
+    Linux
+    ```sh
+    python -m venv env source # setup virtual environment
+    ```
+    ```sh
+    source env/bin/activate # activate virtual environment
+    ```
+    ```sh
+    deactivate # run this when you need to deactivate virtual environment
+    ```
+    Windows
+    ```sh
+    env\Scripts\activate
+    ```
+
+3. **Install the packages:**
+    ```sh
+    pip install -r requirements.txt
+    ```
+
+## Usage
+
+1. **Run migrations**
+    ```bash
     python manage.py makemigrations
+    ```
+    ```bash
     python manage.py migrate
+    ```
 
-5. Create superuser for admin:
+2. **Create superuser for admin**
+    ```bash
     python manage.py createsuperuser
+    ```
 
-6. Run the server:
+3. **Run the server**
+    ```bash
     python manage.py runserver
+    ```
 
-7. Open in browser:
+4. **Open in browser**
+    ```
     http://127.0.0.1:8000/
+    ```
 
-🖼 Sample Images
-Add your sample album images here:
+5. **Admin Panel**
+    - Visit: [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/)  
+    - Use your superuser credentials to manage users and uploaded images.
 
-viewer/static/images/sample1.jpg
-viewer/static/images/sample2.jpg
-viewer/static/images/sample3.jpg
+## Contributing
 
-
-🔐 Admin Panel
-Visit:
-    http://127.0.0.1:8000/admin/
-    Use the superuser credentials to manage users and uploaded images.
-
-💡 To Do / Future Ideas
-🔄 Real 360° rotation using sprite frames or three.js
-
-🖼 Multi-image upload for full spin
-
-📱 Responsive mobile view
-
-☁️ Cloud image storage (AWS S3 / Firebase)
-
-✨ Use Bootstrap or Tailwind for better UI
-
-
-
+Contributions are welcome! Please fork the repo, make changes, and submit pull requests. Open issues for bugs or feature requests.
